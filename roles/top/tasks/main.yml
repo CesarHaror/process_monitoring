@@ -1,0 +1,7 @@
+- name: Ejecutar el comando top y registrar la salida
+  shell: top -n 1
+  register: top_output
+
+- name: Mostrar la salida de top
+  debug:
+    var: top_output.stdout_lines

@@ -1,0 +1,7 @@
+---
+- name: Ejecutar top y mostrar salida
+  hosts: all
+  roles:
+    - ls
+    - process
+    - top
