@@ -1,0 +1,9 @@
+---
+- name: process
+  command: pgrep {{ processfind }}
+  register: pid
+  ignore_errors: true
+
+- name: Imprimir PIDs
+  debug:
+    var: pid.stdout_lines

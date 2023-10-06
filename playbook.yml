@@ -1,7 +1,26 @@
 ---
 - name: Ejecutar top y mostrar salida
   hosts: all
+  become: yes
+  vars:
+    processfind: "top" # Variable de startfleet para realizar la busqueda del proceso
+
   roles:
-    - ls
+  #  - ls
     - process
-    - top
+  #  - top
+
+  # tasks:
+  #   - name: Seleccionar roles
+  #     pause:
+  #       prompt: |
+  #         Selecciona un rol:
+  #         1. process
+  #         2. top
+  #         3. ls
+  #       echo: yes
+  #     register: selecrol
+
+  #   - name: Ejecutar tareas basadas en la selección del usuario
+  #     include_tasks: "roles/{{ selecrol.user_input }}/main.yaml"
+  #     when: selecrol.user_input in ['process', 'top', 'ls']
