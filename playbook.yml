@@ -8,7 +8,7 @@
   roles:
   #  - ls
     - process
-  #  - top
+    - top
 
   # tasks:
   #   - name: Seleccionar roles

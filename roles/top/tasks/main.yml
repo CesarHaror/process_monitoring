@@ -1,6 +1,6 @@
 ---
 - name: Ejecutar el comando top y registrar la salida
-  shell: top -p {{ pid }}
+  shell: top -n 1 -p 7197 | grep 7197
   register: topoutput
 
 - name: Mostrar la salida de top
